@@ -22,7 +22,7 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 * **.NET 8**
 * **ASP.NET Core Web API**
 * **Entity Framework Core**
-* **SQL Server / SQLite**
+* **SQL Server*
 * **AutoMapper**
 * **JWT Authentication**
 * **Swagger (OpenAPI)**
