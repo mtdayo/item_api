@@ -29,8 +29,6 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 
 ---
 
----
-
 # セットアップ
 
 ## 1. リポジトリ取得
