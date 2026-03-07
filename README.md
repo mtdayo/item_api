@@ -82,7 +82,6 @@ https://localhost:xxxx/swagger
 
 | Method | Endpoint         | 説明   |
 | ------ | ---------------- | ---- |
-| GET    | /api/item        | 全件取得 |
 | GET    | /api/item/{id}   | ID取得 |
 | GET    | /api/item/search | 名前検索 |
 | POST   | /api/item        | 新規作成 |
