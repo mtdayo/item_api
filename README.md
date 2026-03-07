@@ -29,37 +29,6 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 
 ---
 
-# プロジェクト構成
-
-```
-ItemApi
-│
-├── Controllers
-│   ├── ItemController.cs
-│   └── AuthController.cs
-│
-├── Services
-│   ├── Interfaces
-│   │   └── IItemService.cs
-│   └── ItemService.cs
-│
-├── Repositories
-│   ├── Interfaces
-│   │   └── IItemRepository.cs
-│   └── ItemRepository.cs
-│
-├── Models
-│   └── Item.cs
-│
-├── DTOs
-│   └── ItemDto.cs
-│
-├── Data
-│   └── AppDbContext.cs
-│
-└── Program.cs
-```
-
 ---
 
 # セットアップ
@@ -67,8 +36,8 @@ ItemApi
 ## 1. リポジトリ取得
 
 ```
-git clone https://github.com/yourname/item-api.git
-cd item-api
+git clone https://github.com/mtdayo/item_api.git
+cd item_api
 ```
 
 ---
@@ -211,4 +180,4 @@ Authorization: Bearer JWT_TOKEN
 
 # License
 
-MIT
+mtdayo
