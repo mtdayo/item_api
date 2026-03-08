@@ -42,6 +42,7 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 
 # プロジェクト構成
 
+```text
 item_api
  ├ Controllers
  ├ Services
@@ -54,6 +55,7 @@ item_api
  ├ Dockerfile
  ├ docker-compose.yml
  └ Program.cs
+```
 
 ---
 
@@ -97,7 +99,7 @@ dotnet run
 起動後ブラウザで以下にアクセス
 
 ```
-http://localhost:5082/swagger
+[Swagger UI](http://localhost:5082/swagger)
 ```
 
 でAPI確認できます。
@@ -110,13 +112,13 @@ http://localhost:5082/swagger
 
 アイテム管理用のCRUD APIです。
 
-| Method | Endpoint         | 説明   |
-| ------ | ---------------- | ---- |
-| GET    | /api/item/{id}   | ID取得 |
-| GET    | /api/item/search | 名前検索 |
-| POST   | /api/item        | 新規作成 |
-| PUT    | /api/item/{id}   | 更新   |
-| DELETE | /api/item/{id}   | 削除   |
+| Method | Endpoint              | 説明 |
+|------|----------------------|------|
+| GET | `/api/item/{id}` | ID取得 |
+| GET | `/api/item/search` | 名前検索 |
+| POST | `/api/item` | 新規作成 |
+| PUT | `/api/item/{id}` | 更新 |
+| DELETE | `/api/item/{id}` | 削除 |
 
 ---
 
@@ -199,11 +201,9 @@ Authorization: Bearer JWT_TOKEN
 # 今後の改善
 
 * Pagination
-* Global Exception Handling
-* Logging
 * Unit Test
-* Docker
-* CI/CD
+* CI/CD (GitHub Actions)
+* API Versioning
 
 ---
 
