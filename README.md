@@ -98,9 +98,8 @@ dotnet run
 
 起動後ブラウザで以下にアクセス
 
-```
 [Swagger UI](http://localhost:5082/swagger)
-```
+
 
 でAPI確認できます。
 
