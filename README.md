@@ -177,4 +177,4 @@ Authorization: Bearer JWT_TOKEN
 
 # License
 
-mtdayo
+MIT
