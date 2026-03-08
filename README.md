@@ -3,7 +3,7 @@
 ASP.NET Core Web API + Entity Framework Core を使用した
 シンプルな **アイテム管理API** です。
 
-学習目的として以下の実務的な構成を含んでいます。
+実務を想定した以下の構成を採用しています。
 
 * Clean Architecture 風構成
 * Repository Pattern
@@ -17,6 +17,17 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 
 ---
 
+# 設計方針
+
+本APIは以下の設計を意識して構築しています。
+
+- Controllerはビジネスロジックを持たない
+- Service層にビジネスロジックを配置
+- Repository層でデータアクセスを管理
+- DTOでAPIレスポンスを分離
+
+---
+
 # 技術スタック
 
 * **.NET 8**
@@ -26,6 +37,23 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 * **AutoMapper**
 * **JWT Authentication**
 * **Swagger (OpenAPI)**
+
+---
+
+# プロジェクト構成
+
+item_api
+ ├ Controllers
+ ├ Services
+ ├ Repositories
+ ├ DTOs
+ ├ Mappings
+ ├ Models
+ ├ Data
+ ├ Middleware
+ ├ Dockerfile
+ ├ docker-compose.yml
+ └ Program.cs
 
 ---
 
@@ -80,6 +108,8 @@ http://localhost:5082/swagger
 
 ## Item API
 
+アイテム管理用のCRUD APIです。
+
 | Method | Endpoint         | 説明   |
 | ------ | ---------------- | ---- |
 | GET    | /api/item/{id}   | ID取得 |
@@ -92,7 +122,7 @@ http://localhost:5082/swagger
 
 ## Auth API
 
-JWTトークンを取得するための認証APIです。
+JWTトークンを発行する認証APIです。
 
 | Method | Endpoint        | 説明      |
 | ------ | --------------- | ------- |
@@ -121,7 +151,7 @@ GET /api/item/search?name=pen
 
 # Soft Delete
 
-削除は **物理削除ではなく論理削除**です。
+削除は **物理削除ではなく論理削除（Soft Delete）** を採用しています。
 
 ```
 DELETE /api/item/{id}
