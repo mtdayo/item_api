@@ -22,7 +22,7 @@ ASP.NET Core Web API + Entity Framework Core を使用した
 * **.NET 8**
 * **ASP.NET Core Web API**
 * **Entity Framework Core**
-* **SQL Server*
+* **SQL Server**
 * **AutoMapper**
 * **JWT Authentication**
 * **Swagger (OpenAPI)**
@@ -66,10 +66,10 @@ dotnet run
 
 # Swagger
 
-起動後
+起動後ブラウザで以下にアクセス
 
 ```
-https://localhost:xxxx/swagger
+http://localhost:5082/swagger
 ```
 
 でAPI確認できます。
@@ -91,6 +91,8 @@ https://localhost:xxxx/swagger
 ---
 
 ## Auth API
+
+JWTトークンを取得するための認証APIです。
 
 | Method | Endpoint        | 説明      |
 | ------ | --------------- | ------- |
